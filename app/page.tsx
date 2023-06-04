@@ -1,112 +1,83 @@
+'use client'
 import Image from 'next/image'
-
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
 export default function Home() {
+  const textContent = "Unlocking Architectural Excellence. ";
+  const duplicatedText = textContent + textContent;
+  const marqueeVariants = {
+    animate: {
+      x: [-390, -2120],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 10,
+          ease: "linear",
+        },
+      },
+    },
+  }
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="h-auto bg-main min-h-screen overflow-hidden">
+      <div className="header p-4 md:p-8 lg:px-32 lg:pt-11 lg:pb-0">
+        <Image src='/image/rumkraf-logo.svg' width="71" height="36" alt='logo' />
+      </div>
+      <div className="content flex flex-col md:flex-row-reverse static h-auto md:min-h-screen md: w-full py-4 px-4 md:px-8 lg:px-32 overflow-hidden">
+        <div className="group-12 absolute mt-52 sm:mt-72 md:mt-36 lg:mt-0 xl:mt-0 md:flex sm:justify-end w-full xl:justify-center hidden">
+            <Image className='w-full md:w-4/5 lg:w-4/5 xl:w-4/6 ml-0 md:ml-40 xl:ml-20' src='/image/group_12.svg' width="887" height="300" alt='logo' />
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className="top relative md:w-1/2 h-72 md:h-80 lg:ml-8">
+          <div className="group-12 absolute mt-72 md:mt-36 -left-20 w-full md:hidden">
+            <Image src='/image/group_12.svg' width="887" height="300" alt='logo' />
+          </div>
+          <div className="building relative flex flex-col items-center w-full z-10">
+            <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="building-4 absolute mt-56 md:mt-64 lg:mt-52 xl:mt-64 px-4">
+              <img src='image/building_4.svg' alt='building4' />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="building-3 absolute mt-24 md:mt-28 lg:mt-16 px-4">
+              <img src='image/building_3.svg' alt='building3' />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 1 }} className="building-2 absolute mt-10 md:mt-16 lg:mt-2 px-4">
+              <img src='image/building_2.svg' alt='building2' />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 1.5 }} className="building-1 absolute mt-2 md:mt-10 lg:-mt-5">
+              <img src='image/building_1.svg' alt='building1' />
+            </motion.div>
+          </div>
+          <div className="running-text-container z-0">
+            <motion.div
+              variants={marqueeVariants}
+              animate="animate"
+              className="running-text absolute top-40 md:top-96 w-full flex"
+            >
+              <p className='text-9xl text-white font-raleway font-extrabold whitespace-nowrap'>
+                 {duplicatedText}
+              </p>
+            </motion.div>
+          </div>
+        </div>
+        <div className=" mt-72 md:mt-28 lg:mt-24 md:w-1/2 md:z-20">
+          <div className="w-full">
+            <div className="hero-text">
+              <p className='text-4xl xl:text-5xl 2xl:text-6xl font-raleway font-extrabold leading-9'>We're in the process of creating something extraordinary</p>
+            </div>
+            <div className="description mt-8">
+              <p className='text-lg xl:text-xl 2xl:text-2xl font-montserrat font-normal leading-7'>For inquiries, project proposals, or to connect with us, please reach out using the contact details below</p>
+            </div>
+            <div className="contact flex flex-col md:flex-row mt-8">
+              <div className="whatsapp flex items-center">
+                <Image src='/image/whatsapp_icon.svg' alt='whatsapp' height='20' width='20' />
+                <p className='ml-3 xl:text-lg 2xl:text-xl'>+62811443883</p>
+              </div>
+              <div className="instagram flex items-center mt-4 md:mt-0 md:ml-16">
+                <Image src='/image/ig_icon.svg' alt='whatsapp' height='20' width='20' />
+                <p className='ml-3 xl:text-lg 2xl:text-xl'>@rumkrafindonesia</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
       </div>
     </main>
   )
