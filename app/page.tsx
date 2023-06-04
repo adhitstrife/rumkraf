@@ -67,11 +67,11 @@ export default function Home() {
             <div className="contact flex flex-col md:flex-row mt-8">
               <div className="whatsapp flex items-center">
                 <Image src='/image/whatsapp_icon.svg' alt='whatsapp' height='20' width='20' />
-                <p className='ml-3 xl:text-lg 2xl:text-xl'>+62811443883</p>
+                <p className='ml-3 xl:text-lg 2xl:text-xl font-montserrat'>+62811443883</p>
               </div>
               <div className="instagram flex items-center mt-4 md:mt-0 md:ml-16">
                 <Image src='/image/ig_icon.svg' alt='whatsapp' height='20' width='20' />
-                <p className='ml-3 xl:text-lg 2xl:text-xl'>@rumkrafindonesia</p>
+                <p className='ml-3 xl:text-lg 2xl:text-xl font-montserrat'>@rumkrafindonesia</p>
               </div>
             </div>
           </div>
