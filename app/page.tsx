@@ -31,13 +31,13 @@ export default function Home() {
             <Image src='/image/group_12.svg' width="887" height="300" alt='logo' />
           </div>
           <div className="building relative flex flex-col items-center w-full z-10">
-            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="building-4 absolute mt-56 md:mt-64 lg:mt-52 xl:mt-64 px-4">
+            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="building-4 absolute mt-56 md:mt-64 lg:mt-52 xl:mt-72 px-4">
               <img src='image/building_4.svg' alt='building4' />
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="building-3 absolute mt-24 md:mt-28 lg:mt-16 px-4">
+            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="building-3 absolute mt-24 md:mt-28 lg:mt-16 xl:mt-20 px-4">
               <img src='image/building_3.svg' alt='building3' />
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 1 }} className="building-2 absolute mt-10 md:mt-16 lg:mt-2 px-4">
+            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 1 }} className="building-2 absolute mt-10 md:mt-16 lg:mt-2 xl:mt-0 px-4">
               <img src='image/building_2.svg' alt='building2' />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 1.5 }} className="building-1 absolute mt-2 md:mt-10 lg:-mt-5">
@@ -48,7 +48,7 @@ export default function Home() {
             <motion.div
               variants={marqueeVariants}
               animate="animate"
-              className="running-text absolute top-20 md:top-96 md:mt-0 w-full flex"
+              className="running-text absolute top-20 md:top-96 md:mt-10 w-full flex"
             >
               <p className='text-10xl text-white font-raleway font-extrabold whitespace-nowrap text-opacity-50'>
                  {duplicatedText}
@@ -56,7 +56,7 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        <div className=" mt-16 md:mt-28 lg:mt-24 md:w-1/2 md:z-20 mb-8">
+        <div className=" mt-16 md:mt-28 lg:mt-24 md:w-2/3 md:z-20 mb-8 z-40">
           <div className="w-full">
             <div className="hero-text">
               <p className='text-4xl xl:text-5xl 2xl:text-6xl font-raleway font-extrabold leading-9'>We're in the process of creating something extraordinary</p>
