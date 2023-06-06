@@ -28,6 +28,9 @@ module.exports = {
       fontSize: {
         "10xl": "250px",
       },
+      margin: {
+        65: "272px",
+      },
     },
   },
   plugins: [],
