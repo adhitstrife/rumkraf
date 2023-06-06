@@ -31,16 +31,16 @@ export default function Home() {
             <Image src='/image/group_12.svg' width="887" height="300" alt='logo' />
           </div>
           <div className="building relative flex flex-col items-center w-full z-10">
-            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="building-4 absolute mt-56 sm:mt-80 md:mt-72 lg:mt-64 xl:mt-72 2xl:mt-80 px-4">
+            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1.5 }} className="building-4 absolute mt-56 sm:mt-80 md:mt-72 lg:mt-64 xl:mt-72 2xl:mt-80 px-4">
               <img src='image/building_4.svg' alt='building4' />
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="building-3 absolute mt-24 sm:mt-24 md:mt-36 lg:mt-28 xl:mt-32 2xl:mt-28 px-4">
+            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }} className="building-3 absolute mt-24 sm:mt-24 md:mt-36 lg:mt-28 xl:mt-32 2xl:mt-28 px-4">
               <img src='image/building_3.svg' alt='building3' />
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 1 }} className="building-2 absolute mt-10 sm:mt-2 md:mt-20 lg:mt-9 xl:mt-12 2xl:mt-9 px-4">
+            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="building-2 absolute mt-10 sm:mt-2 md:mt-20 lg:mt-9 xl:mt-12 2xl:mt-9 px-4">
               <img src='image/building_2.svg' alt='building2' />
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 1.5 }} className="building-1 absolute mt-2 sm:-mt-6 md:mt-12 lg:mt-2 xl:mt-2 2xl:-mt-1">
+            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="building-1 absolute mt-2 sm:-mt-6 md:mt-12 lg:mt-2 xl:mt-2 2xl:-mt-1">
               <img src='image/building_1.svg' alt='building1' />
             </motion.div>
           </div>
