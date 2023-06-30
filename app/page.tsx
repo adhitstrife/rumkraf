@@ -6,7 +6,7 @@ export default function Home() {
   const duplicatedText = textContent + textContent + textContent;
   const marqueeVariants = {
     animate: {
-      x: [-879, -5906],
+      x: [-879, -5281],
       transition: {
         x: {
           repeat: Infinity,
